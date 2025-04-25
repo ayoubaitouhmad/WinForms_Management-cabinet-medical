@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GSM___Gestion_cabinet_médical.Enums;
+using GSM___Gestion_cabinet_médical.Forms;
 using GSM___Gestion_cabinet_médical.Models;
 using GSM___Gestion_cabinet_médical.Utils;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -219,11 +220,6 @@ namespace GSM___Gestion_cabinet_médical
             loadGenderCombobox();
             InitializeListView();
             dtpDob.Format = DateTimePickerFormat.Short;
-
-
-
-
-
         }
 
         private void InitializeListView()
@@ -240,12 +236,12 @@ namespace GSM___Gestion_cabinet_médical
             listView1.FullRowSelect = true;
 
             Patient patient = new Patient(
-                  "Amina", "ray", "Paris,564546 gloas", Gender.Femme, DateTime.Now, Speciality.DefaultSpecs.First()
+                  "Amina", "ray", "Paris,564546 gloas", Gender.Femme, DateTime.Parse("1999-01-04"), Speciality.DefaultSpecs.First()
             );
 
             Cabinet.AjouterPatient(patient);
             patient = new Patient(
-                "Ayoub", "ait", "Fes,564546 ", Gender.Homme, DateTime.Now, Speciality.DefaultSpecs.First()
+                "Ayoub", "ait", "Fes,564546 ", Gender.Homme, DateTime.Parse("2004-01-04"), Speciality.DefaultSpecs.First()
             );
 
             Cabinet.AjouterPatient(patient);
@@ -281,6 +277,25 @@ namespace GSM___Gestion_cabinet_médical
         private void BtnClearList_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+        }
+
+        private void btnShowBySpec_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void btnFiltreByAge_Click(object sender, EventArgs e)
+        {
+            Ranking RankingByAge = new Ranking(Ranking.FormRankingByAge);
+            RankingByAge.StartPosition = FormStartPosition.CenterParent;
+            RankingByAge.ShowDialog(this);
+        }
+
+        private void btnFilterByGender_Click(object sender, EventArgs e)
+        {
+            Ranking RankingByGender = new Ranking(Ranking.FormRankingByGender);
+            RankingByGender.StartPosition = FormStartPosition.CenterParent;
+            RankingByGender.ShowDialog(this);
         }
     }
 }

@@ -71,6 +71,7 @@
             this.btnFilterByGender.TabIndex = 52;
             this.btnFilterByGender.Text = "Classer par sexe";
             this.btnFilterByGender.UseVisualStyleBackColor = false;
+            this.btnFilterByGender.Click += new System.EventHandler(this.btnFilterByGender_Click);
             // 
             // btnExitApp
             // 
@@ -94,6 +95,7 @@
             this.btnFiltreByAge.TabIndex = 51;
             this.btnFiltreByAge.Text = "Classer par âge";
             this.btnFiltreByAge.UseVisualStyleBackColor = false;
+            this.btnFiltreByAge.Click += new System.EventHandler(this.btnFiltreByAge_Click);
             // 
             // btnShowBySpec
             // 
@@ -105,6 +107,7 @@
             this.btnShowBySpec.TabIndex = 50;
             this.btnShowBySpec.Text = "afficher par spécialité";
             this.btnShowBySpec.UseVisualStyleBackColor = false;
+            this.btnShowBySpec.Click += new System.EventHandler(this.btnShowBySpec_Click);
             // 
             // panel3
             // 
