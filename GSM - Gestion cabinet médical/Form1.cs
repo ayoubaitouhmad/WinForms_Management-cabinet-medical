@@ -277,5 +277,10 @@ namespace GSM___Gestion_cabinet_médical
             dtpDob.Format = DateTimePickerFormat.Short;
 
         }
+
+        private void BtnClearList_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+        }
     }
 }

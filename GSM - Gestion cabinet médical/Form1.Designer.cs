@@ -169,6 +169,7 @@
             this.BtnClearList.TabIndex = 18;
             this.BtnClearList.Text = "Réinitialiser la liste";
             this.BtnClearList.UseVisualStyleBackColor = true;
+            this.BtnClearList.Click += new System.EventHandler(this.BtnClearList_Click);
             // 
             // BtnResetForm
             // 
