@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FirstPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FirstPatient.Designer.cs">
+      <DependentUpon>FirstPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Ranking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Utils\Log.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FirstPatient.resx">
+      <DependentUpon>FirstPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ranking.resx">
       <DependentUpon>Ranking.cs</DependentUpon>

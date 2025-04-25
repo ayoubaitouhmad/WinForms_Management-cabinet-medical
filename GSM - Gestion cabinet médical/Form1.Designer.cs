@@ -162,6 +162,7 @@
             this.BtnShowPrioritaireInfos.TabIndex = 19;
             this.BtnShowPrioritaireInfos.Text = "prioritaire";
             this.BtnShowPrioritaireInfos.UseVisualStyleBackColor = true;
+            this.BtnShowPrioritaireInfos.Click += new System.EventHandler(this.BtnShowPrioritaireInfos_Click);
             // 
             // BtnClearList
             // 

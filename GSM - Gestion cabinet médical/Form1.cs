@@ -299,5 +299,12 @@ namespace GSM___Gestion_cabinet_médical
             RankingByGender.StartPosition = FormStartPosition.CenterParent;
             RankingByGender.ShowDialog(this);
         }
+
+        private void BtnShowPrioritaireInfos_Click(object sender, EventArgs e)
+        {
+            FirstPatient FirstPatient = new FirstPatient();
+            FirstPatient.StartPosition = FormStartPosition.CenterParent;
+            FirstPatient.ShowDialog(this);
+        }
     }
 }
