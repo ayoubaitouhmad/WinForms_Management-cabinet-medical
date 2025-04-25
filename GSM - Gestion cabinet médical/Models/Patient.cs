@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GSM___Gestion_cabinet_médical.Models
 {
-    public class Patient
+    public class Patient : Model
     {
         
         public int Id { get; set; }
@@ -37,14 +37,7 @@ namespace GSM___Gestion_cabinet_médical.Models
             return $"{Id}, {Nom} {Prenom} - {SpecialiteDemandee}";
         }
 
-        public static int GenerateTimeBasedId()
-        {
-            // Get current time (milliseconds since Unix epoch)
-            var unixTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-
-            // Use the lower 31 bits to stay within positive int range
-            return (int)(unixTime % int.MaxValue);
-        }
+      
 
         public int Age()
         {
