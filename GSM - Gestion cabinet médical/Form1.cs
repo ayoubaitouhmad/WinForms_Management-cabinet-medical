@@ -241,7 +241,7 @@ namespace GSM___Gestion_cabinet_médical
 
             Cabinet.AjouterPatient(patient);
             patient = new Patient(
-                "Ayoub", "ait", "Fes,564546 ", Gender.Homme, DateTime.Parse("2004-01-04"), Speciality.DefaultSpecs.First()
+                "Ayoub", "ait", "Fes,564546 ", Gender.Homme, DateTime.Parse("2004-01-04"), Speciality.DefaultSpecs[1]
             );
 
             Cabinet.AjouterPatient(patient);
@@ -281,7 +281,9 @@ namespace GSM___Gestion_cabinet_médical
 
         private void btnShowBySpec_Click(object sender, EventArgs e)
         {
-         
+            RankingBySpec RankingBySpec = new RankingBySpec();
+            RankingBySpec.StartPosition = FormStartPosition.CenterParent;
+            RankingBySpec.ShowDialog(this);
         }
 
         private void btnFiltreByAge_Click(object sender, EventArgs e)
