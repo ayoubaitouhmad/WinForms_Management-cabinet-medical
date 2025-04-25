@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnFilterByGender = new System.Windows.Forms.Button();
+            this.btnExitApp = new System.Windows.Forms.Button();
+            this.btnFiltreByAge = new System.Windows.Forms.Button();
+            this.btnShowBySpec = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnShowPrioritaireInfos = new System.Windows.Forms.Button();
+            this.BtnClearList = new System.Windows.Forms.Button();
+            this.BtnResetForm = new System.Windows.Forms.Button();
+            this.BtnRemoveFromList = new System.Windows.Forms.Button();
+            this.BtnAddToList = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbSpecs = new System.Windows.Forms.ComboBox();
@@ -56,67 +56,65 @@
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.lbFirstName = new System.Windows.Forms.Label();
             this.tbFirstName = new System.Windows.Forms.TextBox();
-            this.btnFilterByGender = new System.Windows.Forms.Button();
-            this.btnExitApp = new System.Windows.Forms.Button();
-            this.btnFiltreByAge = new System.Windows.Forms.Button();
-            this.btnShowBySpec = new System.Windows.Forms.Button();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // btnFilterByGender
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(141, 1213);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1926, 301);
-            this.flowLayoutPanel1.TabIndex = 28;
+            this.btnFilterByGender.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnFilterByGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilterByGender.Location = new System.Drawing.Point(1052, 662);
+            this.btnFilterByGender.Name = "btnFilterByGender";
+            this.btnFilterByGender.Size = new System.Drawing.Size(218, 34);
+            this.btnFilterByGender.TabIndex = 52;
+            this.btnFilterByGender.Text = "Classer par sexe";
+            this.btnFilterByGender.UseVisualStyleBackColor = false;
             // 
-            // panel4
+            // btnExitApp
             // 
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Location = new System.Drawing.Point(126, 1169);
-            this.panel4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1911, 349);
-            this.panel4.TabIndex = 17;
+            this.btnExitApp.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnExitApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitApp.Location = new System.Drawing.Point(50, 662);
+            this.btnExitApp.Name = "btnExitApp";
+            this.btnExitApp.Size = new System.Drawing.Size(218, 34);
+            this.btnExitApp.TabIndex = 49;
+            this.btnExitApp.Text = "Quitter l’application";
+            this.btnExitApp.UseVisualStyleBackColor = false;
+            this.btnExitApp.Click += new System.EventHandler(this.btnExitApp_Click);
             // 
-            // panel1
+            // btnFiltreByAge
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(75, 42);
-            this.panel1.TabIndex = 0;
+            this.btnFiltreByAge.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnFiltreByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltreByAge.Location = new System.Drawing.Point(718, 662);
+            this.btnFiltreByAge.Name = "btnFiltreByAge";
+            this.btnFiltreByAge.Size = new System.Drawing.Size(218, 34);
+            this.btnFiltreByAge.TabIndex = 51;
+            this.btnFiltreByAge.Text = "Classer par âge";
+            this.btnFiltreByAge.UseVisualStyleBackColor = false;
             // 
-            // panel7
+            // btnShowBySpec
             // 
-            this.panel7.Controls.Add(this.btnFilterByGender);
-            this.panel7.Controls.Add(this.btnExitApp);
-            this.panel7.Controls.Add(this.btnFiltreByAge);
-            this.panel7.Controls.Add(this.btnShowBySpec);
-            this.panel7.Controls.Add(this.panel3);
-            this.panel7.Controls.Add(this.panel5);
-            this.panel7.Controls.Add(this.panel6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1319, 767);
-            this.panel7.TabIndex = 43;
+            this.btnShowBySpec.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnShowBySpec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowBySpec.Location = new System.Drawing.Point(384, 662);
+            this.btnShowBySpec.Name = "btnShowBySpec";
+            this.btnShowBySpec.Size = new System.Drawing.Size(218, 34);
+            this.btnShowBySpec.TabIndex = 50;
+            this.btnShowBySpec.Text = "afficher par spécialité";
+            this.btnShowBySpec.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel3.Controls.Add(this.listView1);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(936, 67);
+            this.panel3.Location = new System.Drawing.Point(938, 70);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(332, 516);
-            this.panel3.TabIndex = 39;
+            this.panel3.TabIndex = 47;
             // 
             // listView1
             // 
@@ -126,6 +124,7 @@
             this.listView1.Size = new System.Drawing.Size(282, 386);
             this.listView1.TabIndex = 16;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.Click += new System.EventHandler(this.listView1_Click);
             // 
             // label9
             // 
@@ -140,66 +139,69 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.BtnShowPrioritaireInfos);
+            this.panel5.Controls.Add(this.BtnClearList);
+            this.panel5.Controls.Add(this.BtnResetForm);
+            this.panel5.Controls.Add(this.BtnRemoveFromList);
+            this.panel5.Controls.Add(this.BtnAddToList);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(486, 67);
+            this.panel5.Location = new System.Drawing.Point(488, 70);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(324, 516);
-            this.panel5.TabIndex = 40;
+            this.panel5.TabIndex = 48;
             // 
-            // button6
+            // BtnShowPrioritaireInfos
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(14, 402);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(294, 34);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "prioritaire";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnShowPrioritaireInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnShowPrioritaireInfos.Location = new System.Drawing.Point(14, 402);
+            this.BtnShowPrioritaireInfos.Name = "BtnShowPrioritaireInfos";
+            this.BtnShowPrioritaireInfos.Size = new System.Drawing.Size(294, 34);
+            this.BtnShowPrioritaireInfos.TabIndex = 19;
+            this.BtnShowPrioritaireInfos.Text = "prioritaire";
+            this.BtnShowPrioritaireInfos.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtnClearList
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(14, 324);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(294, 34);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Réinitialiser la liste";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnClearList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClearList.Location = new System.Drawing.Point(14, 324);
+            this.BtnClearList.Name = "BtnClearList";
+            this.BtnClearList.Size = new System.Drawing.Size(294, 34);
+            this.BtnClearList.TabIndex = 18;
+            this.BtnClearList.Text = "Réinitialiser la liste";
+            this.BtnClearList.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtnResetForm
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(14, 246);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(294, 34);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Réinitialiser le formulaire";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnResetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnResetForm.Location = new System.Drawing.Point(14, 246);
+            this.BtnResetForm.Name = "BtnResetForm";
+            this.BtnResetForm.Size = new System.Drawing.Size(294, 34);
+            this.BtnResetForm.TabIndex = 17;
+            this.BtnResetForm.Text = "Réinitialiser le formulaire";
+            this.BtnResetForm.UseVisualStyleBackColor = true;
+            this.BtnResetForm.Click += new System.EventHandler(this.BtnResetForm_Click);
             // 
-            // button3
+            // BtnRemoveFromList
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(14, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(294, 34);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Retirer un patient de la liste";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnRemoveFromList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRemoveFromList.Location = new System.Drawing.Point(14, 168);
+            this.BtnRemoveFromList.Name = "BtnRemoveFromList";
+            this.BtnRemoveFromList.Size = new System.Drawing.Size(294, 34);
+            this.BtnRemoveFromList.TabIndex = 16;
+            this.BtnRemoveFromList.Text = "Retirer un patient de la liste";
+            this.BtnRemoveFromList.UseVisualStyleBackColor = true;
+            this.BtnRemoveFromList.Click += new System.EventHandler(this.BtnRemoveFromList_Click);
             // 
-            // button2
+            // BtnAddToList
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(14, 90);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(294, 34);
-            this.button2.TabIndex = 15;
-            this.button2.Text = " Ajouter à la liste d’attente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnAddToList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddToList.Location = new System.Drawing.Point(14, 90);
+            this.BtnAddToList.Name = "BtnAddToList";
+            this.BtnAddToList.Size = new System.Drawing.Size(294, 34);
+            this.BtnAddToList.TabIndex = 15;
+            this.BtnAddToList.Text = " Ajouter à la liste d’attente";
+            this.BtnAddToList.UseVisualStyleBackColor = true;
+            this.BtnAddToList.Click += new System.EventHandler(this.BtnAddToList_Click);
             // 
             // label1
             // 
@@ -227,10 +229,10 @@
             this.panel6.Controls.Add(this.tbLastName);
             this.panel6.Controls.Add(this.lbFirstName);
             this.panel6.Controls.Add(this.tbFirstName);
-            this.panel6.Location = new System.Drawing.Point(46, 67);
+            this.panel6.Location = new System.Drawing.Point(48, 70);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(332, 516);
-            this.panel6.TabIndex = 38;
+            this.panel6.TabIndex = 46;
             // 
             // cbSpecs
             // 
@@ -346,70 +348,30 @@
             this.tbFirstName.Size = new System.Drawing.Size(281, 20);
             this.tbFirstName.TabIndex = 0;
             // 
-            // btnFilterByGender
-            // 
-            this.btnFilterByGender.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnFilterByGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterByGender.Location = new System.Drawing.Point(1050, 659);
-            this.btnFilterByGender.Name = "btnFilterByGender";
-            this.btnFilterByGender.Size = new System.Drawing.Size(218, 34);
-            this.btnFilterByGender.TabIndex = 45;
-            this.btnFilterByGender.Text = "Classer par sexe";
-            this.btnFilterByGender.UseVisualStyleBackColor = false;
-            // 
-            // btnExitApp
-            // 
-            this.btnExitApp.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnExitApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitApp.Location = new System.Drawing.Point(48, 659);
-            this.btnExitApp.Name = "btnExitApp";
-            this.btnExitApp.Size = new System.Drawing.Size(218, 34);
-            this.btnExitApp.TabIndex = 42;
-            this.btnExitApp.Text = "Quitter l’application";
-            this.btnExitApp.UseVisualStyleBackColor = false;
-            // 
-            // btnFiltreByAge
-            // 
-            this.btnFiltreByAge.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnFiltreByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltreByAge.Location = new System.Drawing.Point(716, 659);
-            this.btnFiltreByAge.Name = "btnFiltreByAge";
-            this.btnFiltreByAge.Size = new System.Drawing.Size(218, 34);
-            this.btnFiltreByAge.TabIndex = 44;
-            this.btnFiltreByAge.Text = "Classer par âge";
-            this.btnFiltreByAge.UseVisualStyleBackColor = false;
-            // 
-            // btnShowBySpec
-            // 
-            this.btnShowBySpec.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnShowBySpec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowBySpec.Location = new System.Drawing.Point(382, 659);
-            this.btnShowBySpec.Name = "btnShowBySpec";
-            this.btnShowBySpec.Size = new System.Drawing.Size(218, 34);
-            this.btnShowBySpec.TabIndex = 43;
-            this.btnShowBySpec.Text = "afficher par spécialité";
-            this.btnShowBySpec.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1319, 767);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1327, 784);
+            this.Controls.Add(this.btnFilterByGender);
+            this.Controls.Add(this.btnExitApp);
+            this.Controls.Add(this.btnFiltreByAge);
+            this.Controls.Add(this.btnShowBySpec);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel4.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -422,19 +384,19 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnFilterByGender;
+        private System.Windows.Forms.Button btnExitApp;
+        private System.Windows.Forms.Button btnFiltreByAge;
+        private System.Windows.Forms.Button btnShowBySpec;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnShowPrioritaireInfos;
+        private System.Windows.Forms.Button BtnClearList;
+        private System.Windows.Forms.Button BtnResetForm;
+        private System.Windows.Forms.Button BtnRemoveFromList;
+        private System.Windows.Forms.Button BtnAddToList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ComboBox cbSpecs;
@@ -450,10 +412,6 @@
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.Label lbFirstName;
         private System.Windows.Forms.TextBox tbFirstName;
-        private System.Windows.Forms.Button btnFilterByGender;
-        private System.Windows.Forms.Button btnExitApp;
-        private System.Windows.Forms.Button btnFiltreByAge;
-        private System.Windows.Forms.Button btnShowBySpec;
     }
 }
 

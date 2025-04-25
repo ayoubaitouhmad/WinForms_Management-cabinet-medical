@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GSM___Gestion_cabinet_médical.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,9 @@ namespace GSM___Gestion_cabinet_médical.Models
 
         public string Nom { get; set; }
         public string Adresse { get; set; }
-        public List<string> Specialites { get; set; } = new List<string> { "Généraliste", "Dentiste", "Cardiologue" };
-        public List<Patient> Patients { get; set; } = new List<Patient>();
+        public List<Speciality> Specialites { get; set; }
+        public static List<Patient> Patients { get; set; } = new List<Patient>();
+
 
 
 
@@ -21,7 +23,7 @@ namespace GSM___Gestion_cabinet_médical.Models
         {
         }
 
-        public Cabinet(string nom, string adresse, List<string> specialites, List<Patient> patients)
+        public Cabinet(string nom, string adresse, List<Speciality> specialites, List<Patient> patients)
         {
             Nom = nom;
             Adresse = adresse;
@@ -31,19 +33,20 @@ namespace GSM___Gestion_cabinet_médical.Models
 
 
 
-        public void AjouterPatient(Patient patient) => Patients.Add(patient);
+        public static void AjouterPatient(Patient patient) => Patients.Add(patient);
 
-        public void SupprimerPatient(Patient patient) => Patients.Remove(patient);
+        public static void SupprimerPatient(Patient patient) => Patients.Remove(patient);
 
-        public Patient ChercherPatient(string nom) => Patients.FirstOrDefault(p => p.Nom.Equals(nom, StringComparison.OrdinalIgnoreCase));
+        public static Patient ChercherPatient(string nom) => Patients.FirstOrDefault(p => p.Nom.Equals(nom, StringComparison.OrdinalIgnoreCase));
+        public static Patient findPationById(int id) => Patients.FirstOrDefault(p => p.Id == id);
 
-        public List<Patient> PatientsParSexe(string sexe) => Patients.Where(p => p.Sexe == sexe).ToList();
+        public static List<Patient> PatientsParSexe(Gender sexe) => Patients.Where(p => p.Sexe == sexe).ToList();
 
-        public List<Patient> PatientsParSpecialite(string specialite) => Patients.Where(p => p.SpecialiteDemandee == specialite).ToList();
+        public static List<Patient> PatientsParSpecialite(Speciality specialite) => Patients.Where(p => p.SpecialiteDemandee == specialite).ToList();
 
-        public Patient PatientPrioritaire() => Patients.FirstOrDefault();
+        public static Patient PatientPrioritaire() => Patients.FirstOrDefault();
 
-        public List<IGrouping<string, Patient>> PatientsParAge()
+        public static List<IGrouping<string, Patient>> PatientsParAge()
         {
             return Patients.GroupBy(p =>
             {
