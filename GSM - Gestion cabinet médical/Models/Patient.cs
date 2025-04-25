@@ -46,5 +46,10 @@ namespace GSM___Gestion_cabinet_médical.Models
             return (int)(unixTime % int.MaxValue);
         }
 
+        public int Age()
+        {
+           return DateTime.Now.Year - DateNaissance.Year;
+        }
+
     }
 }
