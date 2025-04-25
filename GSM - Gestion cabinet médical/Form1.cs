@@ -21,20 +21,22 @@ using TextBox = System.Windows.Forms.TextBox;
 
 namespace GSM___Gestion_cabinet_médical
 {
-    public partial class Form1 : Form
+    public partial class Form1 : BaseForm
     {
  
         public Form1()
         {
             InitializeComponent();
             LoadStyling();
-
-          
-
-
-
+            dtpDob.Format = DateTimePickerFormat.Short;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loadSpecsCombobox();
+            loadGenderCombobox();
+            InitializeListView();
+        }
 
         private void LoadStyling()
         {
@@ -56,62 +58,18 @@ namespace GSM___Gestion_cabinet_médical
                 }
             }
         }
-        private void textboxStyling(TextBox textBox)
-        {
-            textBox.BackColor = Color.White;
-            textBox.ForeColor = Color.Navy;
-            textBox.Font = new Font("Segoe UI", 10F);
-            textBox.BorderStyle = BorderStyle.FixedSingle;
-        }
-        private void paneltStyling(Panel panel)
-        {
-            panel.BackColor = ColorTranslator.FromHtml("#E5E5E5");
-        }
-        private void buttontStyling(Button button)
-        {
-            button.Font = new Font("Segoe UI", 10, FontStyle.Regular);
-
-            // Couleurs
-            button.BackColor = ColorTranslator.FromHtml("#FCA311");
-            button.ForeColor = ColorTranslator.FromHtml("#14213D");
-
-            // Coins arrondis (nécessite OwnerDraw ou un custom control pour être *vraiment* arrondi)
-
-            // Bordure & apparence
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-
-            // Taille
-            button.Padding = new Padding(10, 6, 10, 6); // simulate px-4 py-2
-            button.AutoSize = true;
-
-
-            button.Font = new Font("Segoe UI", 13F, FontStyle.Regular);
-
-
-            // Effet de survol (hover)
-            button.MouseEnter += (s, e) => {
-                button.BackColor = ColorTranslator.FromHtml("#be7702");
-                button.ForeColor = ColorTranslator.FromHtml("#000000");
-            };
-            button.MouseLeave += (s, e) => {
-                button.BackColor = ColorTranslator.FromHtml("#FCA311");
-                button.ForeColor = ColorTranslator.FromHtml("#14213D");
-            };
-
-        }
-        /***************************************************/
+      
+      
+        
 
         private void btnExitApp_Click(object sender, EventArgs e)
         {
             if (System.Windows.Forms.Application.MessageLoop)
             {
-                // WinForms app
                 System.Windows.Forms.Application.Exit();
             }
             else
             {
-                // Console app
                 System.Environment.Exit(1);
             }
         }
@@ -119,15 +77,12 @@ namespace GSM___Gestion_cabinet_médical
         {
             Speciality spec = (Speciality)cbSpecs.SelectedItem;
             Gender gender = (Gender)cbGender.SelectedItem;
-
             String patientFirstName = tbFirstName.Text;
             String patientLastName = tbLastName.Text;
             String patientAdresse = tbAdrtesse.Text;
             String patientDateNaissance = dtpDob.Text;
             String patientSpecialite = String.Empty;
             String patientGender = cbGender.Text;
-
-
             if (patientFirstName.Equals(String.Empty))
             {
                 MessageBox.Show("Le nom est obligatoire.", "Messages de validation");
@@ -214,13 +169,7 @@ namespace GSM___Gestion_cabinet_médical
                 MessageBox.Show(" Aucun patient sélectionné.", "Messages de systeme");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            loadSpecsCombobox();
-            loadGenderCombobox();
-            InitializeListView();
-            dtpDob.Format = DateTimePickerFormat.Short;
-        }
+    
 
         private void InitializeListView()
         {

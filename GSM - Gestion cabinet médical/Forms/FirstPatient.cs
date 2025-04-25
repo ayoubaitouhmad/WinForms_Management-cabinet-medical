@@ -12,11 +12,17 @@ using System.Windows.Forms;
 
 namespace GSM___Gestion_cabinet_médical.Forms
 {
-    public partial class FirstPatient : Form
+    public partial class FirstPatient : BaseForm
     {
         public FirstPatient()
         {
             InitializeComponent();
+            textboxStyling(tbFirstName);
+            textboxStyling(tbLastName);
+            textboxStyling(tbGender);
+            textboxStyling(tbSpec);
+
+
             tbFirstName.ReadOnly= true;
             tbLastName.ReadOnly = true;
             tbGender.ReadOnly = true;
